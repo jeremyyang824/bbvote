@@ -1,0 +1,20 @@
+
+.exp-list {
+  height: 60px;
+}
+
+.exp-mark {
+  font-size: 30px;
+  color: #343a40;
+}
+.exp-like {
+  font-size: 32px;
+  color: gray;
+  cursor: pointer;
+}
+.exp-like:hover {
+  color: lightpink;
+}
+.exp-like-selected {
+  color: lightpink;
+}

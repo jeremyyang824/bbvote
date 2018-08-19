@@ -1,0 +1,7 @@
+<span class="rating">
+  <ng-container *ngFor="let star of _stars">
+    <i class="fa fa-star" aria-hidden="true" *ngIf="star === 1"></i>
+    <i class="fa fa-star-half-o" aria-hidden="true" *ngIf="star === 2"></i>
+    <i class="fa fa-star-o" aria-hidden="true" *ngIf="star === 0"></i>
+  </ng-container>
+</span>

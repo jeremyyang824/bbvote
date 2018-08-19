@@ -1,0 +1,23 @@
+<ul class="list-group shadow-sm">
+  <li *ngFor="let expect of intentions$ | async" class="list-group-item d-flex lh-light px-0">
+    <div class="container">
+      <div class="row exp-list">
+        <div class="col d-flex justify-content-center exp-mark">
+          <div class="d-flex align-self-center bd-highlight">{{expect.votes}}</div>
+        </div>
+        <div class="col-7 d-flex flex-column align-items-start exp-content px-0">
+          <h6 class="my-0">{{expect.title}}</h6>
+          <small class="d-block mt-auto ml-auto">-- {{expect.speaker}}</small>
+        </div>
+        <div *ngIf="expect.isMyVoted" (click)="voteTopic(expect, false)"
+          class="col d-flex justify-content-center exp-like exp-like-selected">
+          <i class="d-flex align-self-center fa fa-heart" aria-hidden="true"></i>
+        </div>
+        <div *ngIf="!expect.isMyVoted" (click)="voteTopic(expect, true)"
+          class="col d-flex justify-content-center exp-like">
+          <i class="d-flex align-self-center fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
