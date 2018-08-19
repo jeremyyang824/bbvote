@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 
 import { ServiceProxyModule } from '@shared/service-proxies/service-proxy.module';
 import { SharedModule } from '@shared/shared.module';
-
 import { RatingModule } from 'ngx-bootstrap/rating';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { HomeComponent } from './home/home.component';
 import { TopicsComponent } from './topics/topics.component';
@@ -31,7 +31,8 @@ import { ExpectsComponent } from './expects/expects.component';
     AppRoutingModule,
     ServiceProxyModule,
     SharedModule,
-    RatingModule.forRoot()
+    RatingModule.forRoot(),
+    PaginationModule.forRoot(),
   ],
   providers: []
 })

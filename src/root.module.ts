@@ -16,8 +16,9 @@ import { API_BASE_URL } from './shared/service-proxies/service-proxies';
 
 import { RootComponent } from './root.component';
 import { ModalModule } from 'ngx-bootstrap';
+// import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
 @NgModule({
   imports: [
@@ -25,9 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule.forRoot(),
     ModalModule.forRoot(),
+    // PaginationModule.forRoot(),
     ServiceProxyModule,
     RootRoutingModule,
     HttpClientModule,
+    LoadingBarHttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

@@ -1,0 +1,9 @@
+/deep/ .dark-theme.pagination .page-item .page-link {
+  color: #666;
+  background-color: #fff;
+}
+/deep/ .dark-theme.pagination .page-item.active .page-link {
+  color: #fff;
+  background-color: #777;
+  border-color: #777;
+}

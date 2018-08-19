@@ -14,6 +14,9 @@ export class TopicsComponent extends AppComponentBase implements OnInit {
 
   topics$: Observable<Topic[]>;
 
+  totalItems = 1266;
+  currentPage = 1;
+
   constructor(
     injector: Injector,
     private topicService: TopicService
@@ -23,6 +26,12 @@ export class TopicsComponent extends AppComponentBase implements OnInit {
 
   ngOnInit() {
     this.topics$ = this.topicService.getAllTopics();
+  }
+
+  pageChanged(event: any): void {
+    this.currentPage = event.page;
+    const startItem = (event.page - 1) * event.itemsPerPage;
+    const endItem = event.page * event.itemsPerPage;
   }
 
 }

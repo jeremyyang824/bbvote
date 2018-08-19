@@ -9,7 +9,7 @@ import { TeamColorDirective } from '@shared/team-color/team-color.directive';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     RatingComponent,
@@ -17,7 +17,7 @@ import { TeamColorDirective } from '@shared/team-color/team-color.directive';
   ],
   exports: [
     RatingComponent,
-    TeamColorDirective
+    TeamColorDirective,
   ]
 })
 export class SharedModule {
