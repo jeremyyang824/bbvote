@@ -15,13 +15,15 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { HomeComponent } from './home/home.component';
 import { TopicsComponent } from './topics/topics.component';
 import { ExpectsComponent } from './expects/expects.component';
+import { TopicDetailComponent } from './topic-detail/topic-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopicsComponent,
-    ExpectsComponent
+    ExpectsComponent,
+    TopicDetailComponent
   ],
   imports: [
     CommonModule,

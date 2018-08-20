@@ -10,7 +10,7 @@
       </div>
     </div>
     <h3 class="mb-2">
-      <a class="text-dark" href="#">{{topic.title}}</a>
+      <a routerLink="/app/detail/{{topic.id}}" class="text-dark">{{topic.title}}</a>
     </h3>
     <div class="mb-2 text-muted">{{topic.holdingDate | date:'MMM dd, yyyy'}}</div>
     <p class="card-text mb-auto">
@@ -30,6 +30,6 @@
     style="width: 200px; height: 250px;">
 </div>
 <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"
-  [boundaryLinks]="true" [maxSize]="10" [itemsPerPage]="10" class="dark-theme"
+  [boundaryLinks]="true" [maxSize]="10" [itemsPerPage]="pageSize" class="dark-theme"
   previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
 </pagination>

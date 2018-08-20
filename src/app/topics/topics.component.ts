@@ -1,5 +1,7 @@
 import { Component, OnInit, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { AppComponentBase } from '@shared/app-component-base';
 import { Topic } from 'models/topic';
@@ -15,23 +17,28 @@ export class TopicsComponent extends AppComponentBase implements OnInit {
   topics$: Observable<Topic[]>;
 
   totalItems = 1266;
-  currentPage = 1;
+  pageSize = 10;
+  currentPage: number;
 
   constructor(
-    injector: Injector,
+    private injector: Injector,
+    private route: ActivatedRoute,
+    private location: Location,
     private topicService: TopicService
   ) {
     super(injector);
   }
 
   ngOnInit() {
+    this.currentPage = +this.route.snapshot.paramMap.get('page');
+    const start = (this.currentPage - 1) * this.pageSize;
+
     this.topics$ = this.topicService.getAllTopics();
   }
 
   pageChanged(event: any): void {
     this.currentPage = event.page;
-    const startItem = (event.page - 1) * event.itemsPerPage;
-    const endItem = event.page * event.itemsPerPage;
+    this.location.go('/app/home/' + this.currentPage);
   }
 
 }

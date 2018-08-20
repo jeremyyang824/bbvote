@@ -32,5 +32,12 @@ export class TopicService extends AppServiceBase {
       );
   }
 
-
+  getTopic(id: number): Observable<Topic> {
+    const url = `${this.topicsUrl}/${id}`;
+    return this.http.get<Topic>(url)
+      .pipe(
+        tap(_ => this.log(`fetched topic id=${id}`)),
+        catchError(this.handleError<Topic>(`getTopic id=${id}`))
+      );
+  }
 }
