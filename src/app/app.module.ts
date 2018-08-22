@@ -11,6 +11,7 @@ import { ServiceProxyModule } from '@shared/service-proxies/service-proxy.module
 import { SharedModule } from '@shared/shared.module';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { HomeComponent } from './home/home.component';
 import { TopicsComponent } from './topics/topics.component';
@@ -33,6 +34,7 @@ import { TopicDetailComponent } from './topic-detail/topic-detail.component';
     AppRoutingModule,
     ServiceProxyModule,
     SharedModule,
+    NgxEchartsModule,
     RatingModule.forRoot(),
     PaginationModule.forRoot(),
   ],

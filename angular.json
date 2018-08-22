@@ -33,7 +33,10 @@
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/lodash/lodash.min.js",
               "node_modules/moment/min/moment.min.js",
-              "node_modules/toastr/toastr.js"
+              "node_modules/toastr/toastr.js",
+              "node_modules/echarts/dist/echarts.min.js",
+              "node_modules/echarts/map/js/china.js",
+              "node_modules/echarts/dist/extension/bmap.js"
             ]
           },
           "configurations": {
@@ -95,7 +98,10 @@
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/lodash/lodash.min.js",
               "node_modules/moment/min/moment.min.js",
-              "node_modules/toastr/toastr.js"
+              "node_modules/toastr/toastr.js",
+              "node_modules/echarts/dist/echarts.min.js",
+              "node_modules/echarts/map/js/china.js",
+              "node_modules/echarts/dist/extension/bmap.js"
             ]
           }
         },
