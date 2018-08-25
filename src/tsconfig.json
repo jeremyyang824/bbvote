@@ -18,7 +18,7 @@
         "@app/*": [ "./app/*" ],
         "@shared/*": [ "./shared/*" ],
         "@node_modules/*": [ "../node_modules/*" ],
-        "echarts": ["node_modules/echarts/dist/echarts.min.js"]
+        "echarts": ["../node_modules/echarts/dist/echarts.min.js"]
     }
   },
   "exclude": [

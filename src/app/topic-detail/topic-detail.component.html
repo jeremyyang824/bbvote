@@ -46,8 +46,13 @@
             <div class="mb-1 benchmark-feedback">
               <textarea type="text" class="form-control" name="myFeedback" [(ngModel)]="myFeedback" rows="5" autofocus="autofocus" placeholder="Please write down your feedback"></textarea>
             </div>
+            <div class="mt-3">
+              <button mat-raised-button class="btn-feedback" (click)="submitFeedback()" [disabled]="loading"><i *ngIf="loading"
+                  class="fa fa-spin fa-refresh"></i> Submit</button>
+            </div>
           </form>
         </div>
+
       </div>
 
       <div class="col-lg-6 order-lg-1 mb-5">
@@ -70,10 +75,113 @@
     <div class="row topic-feedbacks">
       <div class="col-12">
         <h4 class="subtitle mb-2 font-italic">All Feedbacks:</h4>
-        <hr>
-        <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu
-          leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras
-          mattis consectetur purus sit amet fermentum.</p>
+        <div>
+          <hr>
+          <div class="flex-md-row mb-4">
+            <div class="d-flex flex-column align-items-start mb-3">
+              <div class="container px-0">
+                <div class="d-flex">
+                  <p class="item-from d-inline-block mb-2">From: 192.168.1.1</p>
+                  <small class="item-time ml-auto align-self-center mb-1">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    2018-08-15 17:30
+                  </small>
+                </div>
+              </div>
+              <p class="item-feedback mb-1">
+                Very Good! I like it.
+              </p>
+              <div class="item-point-container d-flex justify-content-end">
+                <div class="item-point">
+                  Subject:
+                  <app-rating [marks]="4"></app-rating>
+                </div>
+                <div class="item-point">
+                  Difficulty:
+                  <app-rating [marks]="5"></app-rating>
+                </div>
+                <div class="item-point">
+                  Practicability:
+                  <app-rating [marks]="3"></app-rating>
+                </div>
+                <div class="item-point">
+                  Infectivity:
+                  <app-rating [marks]="5"></app-rating>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <hr>
+          <div class="d-flex flex-column align-items-start">
+            <div class="container px-0">
+              <div class="d-flex">
+                <p class="item-from d-inline-block mb-2">From: 192.168.1.1</p>
+                <small class="item-time ml-auto align-self-center mb-1">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  2018-08-15 17:30
+                </small>
+              </div>
+            </div>
+            <p class="item-feedback mb-1">
+              Very Good! I like it.
+            </p>
+            <div class="item-point-container d-flex justify-content-end">
+              <div class="item-point">
+                Subject:
+                <app-rating [marks]="4"></app-rating>
+              </div>
+              <div class="item-point">
+                Difficulty:
+                <app-rating [marks]="5"></app-rating>
+              </div>
+              <div class="item-point">
+                Practicability:
+                <app-rating [marks]="3"></app-rating>
+              </div>
+              <div class="item-point">
+                Infectivity:
+                <app-rating [marks]="5"></app-rating>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+            <hr>
+            <div class="d-flex flex-column align-items-start">
+              <div class="container px-0">
+                <div class="d-flex">
+                  <p class="item-from d-inline-block mb-2">From: 192.168.1.1</p>
+                  <small class="item-time ml-auto align-self-center mb-1">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    2018-08-15 17:30
+                  </small>
+                </div>
+              </div>
+              <p class="item-feedback mb-1">
+                Very Good! I like it.
+              </p>
+              <div class="item-point-container d-flex justify-content-end">
+                <div class="item-point">
+                  Subject:
+                  <app-rating [marks]="4"></app-rating>
+                </div>
+                <div class="item-point">
+                  Difficulty:
+                  <app-rating [marks]="5"></app-rating>
+                </div>
+                <div class="item-point">
+                  Practicability:
+                  <app-rating [marks]="3"></app-rating>
+                </div>
+                <div class="item-point">
+                  Infectivity:
+                  <app-rating [marks]="5"></app-rating>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
 

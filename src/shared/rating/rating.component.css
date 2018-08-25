@@ -1,4 +1,6 @@
 
 .rating {
+  white-space: nowrap;
+  display: inline-block;
   color: goldenrod;
 }

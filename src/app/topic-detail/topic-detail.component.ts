@@ -1,5 +1,5 @@
 import { Component, OnInit, Injector, Input } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { EChartOption } from 'echarts';
@@ -15,6 +15,7 @@ import { TopicService } from 'services/topic.service';
 })
 export class TopicDetailComponent extends AppComponentBase implements OnInit {
 
+  loading = false;
   topic: Topic = new Topic();
 
   // my vote
@@ -59,5 +60,23 @@ export class TopicDetailComponent extends AppComponentBase implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  submitFeedback(): void {
+    if (this.loading === false) {
+      this.loading = true;
+      this.getMockData()
+        .subscribe((result) => {
+          this.loading = false;
+        });
+    }
+  }
+
+  private getMockData(): Observable<string> {
+    const subject = new Subject<string>();
+    setTimeout(() => {
+      subject.next('success');
+    }, 2000);
+    return subject;
   }
 }

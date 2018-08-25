@@ -27,3 +27,33 @@
 .topic-feedbacks {
   margin-bottom: 3rem;
 }
+
+.btn-feedback{
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  padding-top:6px;
+  padding-bottom:6px;
+  width: 150px;
+}
+
+/* chat */
+.item-from {
+  font-weight: 600;
+  color: #3c8dbc;
+}
+.item-time {
+  color: #777;
+}
+.item-feedback {
+  margin-left: 1.5rem;
+}
+.item-point-container {
+  width: 100%;
+  margin-left: 1.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+.item-point {
+  margin-right: 1rem;
+}

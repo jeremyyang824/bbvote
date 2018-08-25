@@ -18,6 +18,11 @@ import { TopicsComponent } from './topics/topics.component';
 import { ExpectsComponent } from './expects/expects.component';
 import { TopicDetailComponent } from './topic-detail/topic-detail.component';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +40,10 @@ import { TopicDetailComponent } from './topic-detail/topic-detail.component';
     ServiceProxyModule,
     SharedModule,
     NgxEchartsModule,
+    MatButtonModule,
+    MatListModule,
+    MatDividerModule,
+    MatIconModule,
     RatingModule.forRoot(),
     PaginationModule.forRoot(),
   ],
