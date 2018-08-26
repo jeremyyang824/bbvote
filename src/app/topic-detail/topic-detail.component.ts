@@ -26,16 +26,39 @@ export class TopicDetailComponent extends AppComponentBase implements OnInit {
   myFeedback: string;
 
   chartOption: EChartOption = {
-    xAxis: {
-      type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    tooltip: {
+      trigger: 'axis'
     },
-    yAxis: {
-      type: 'value'
+    radar: {
+      name: {
+        textStyle: {
+          color: '#fff',
+          backgroundColor: '#999',
+          borderRadius: 3,
+          padding: [3, 5]
+        }
+      },
+      indicator: [
+        { name: 'Subject', max: 5 },
+        { name: 'Difficulty', max: 5 },
+        { name: 'Practicability', max: 5 },
+        { name: 'Infectivity', max: 5 },
+        { name: 'Hot', max: 5 }
+      ],
+      radius: 150
     },
     series: [{
-      data: [820, 932, 901, 934, 1290, 1330, 1320],
-      type: 'line'
+      name: 'Topic Avg Points',
+      type: 'radar',
+      tooltip: {
+        trigger: 'item'
+      },
+      itemStyle: { normal: { areaStyle: { type: 'default' } } },
+      data: [
+        {
+          value: [4.35, 3.23, 4.68, 4.12, 1.2]
+        }
+      ]
     }]
   };
 

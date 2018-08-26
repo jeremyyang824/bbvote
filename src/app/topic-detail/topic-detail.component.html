@@ -28,19 +28,19 @@
         <div>
           <form #f="ngForm" novalidate>
             <div class="mb-1 benchmark-line">
-              <span class="beachmark-title">Subject:</span>
+              <span class="beachmark-title" matTooltip="How attractive is the topic subject ?" matTooltipPosition="above">Subject:</span>
               <rating name="myPoint01" class="beachmark-ratting" [(ngModel)]="myPoint01" [max]="5"></rating>
             </div>
             <div class="mb-1 benchmark-line">
-              <span class="beachmark-title">Difficulty:</span>
+              <span class="beachmark-title" matTooltip="How appropriate is the difficulty ?" matTooltipPosition="above">Difficulty:</span>
               <rating name="myPoint02" class="beachmark-ratting" [(ngModel)]="myPoint02" [max]="5"></rating>
             </div>
             <div class="mb-1 benchmark-line">
-              <span class="beachmark-title">Practicability:</span>
+              <span class="beachmark-title" matTooltip="How practical is the topic content ?" matTooltipPosition="above">Practicability:</span>
               <rating name="myPoint03" class="beachmark-ratting" [(ngModel)]="myPoint03" [max]="5"></rating>
             </div>
             <div class="mb-3 benchmark-line">
-              <span class="beachmark-title">Infectivity:</span>
+              <span class="beachmark-title" matTooltip="How does the speaker appeal ?" matTooltipPosition="above">Infectivity:</span>
               <rating name="myPoint04" class="beachmark-ratting" [(ngModel)]="myPoint04" [max]="5"></rating>
             </div>
             <div class="mb-1 benchmark-feedback">

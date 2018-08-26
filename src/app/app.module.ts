@@ -22,6 +22,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+import { AppSearchService } from './app.search.service';
 
 @NgModule({
   declarations: [
@@ -44,9 +47,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     MatDividerModule,
     MatIconModule,
+    MatTooltipModule,
     RatingModule.forRoot(),
     PaginationModule.forRoot(),
   ],
-  providers: []
+  providers: [AppSearchService]
 })
 export class AppModule { }
