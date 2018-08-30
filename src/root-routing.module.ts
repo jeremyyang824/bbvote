@@ -7,6 +7,11 @@ const routes: Routes = [
     path: 'app',
     loadChildren: './app/app.module#AppModule',
     data: { preload: true }
+  },
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule',
+    data: { preload: true }
   }
 ];
 

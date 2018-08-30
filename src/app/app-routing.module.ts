@@ -13,6 +13,7 @@ import { TopicDetailComponent } from './topic-detail/topic-detail.component';
         path: '',
         component: AppComponent,
         children: [
+          { path: '', redirectTo: '/app/home/1', pathMatch: 'full' },
           { path: 'home', redirectTo: '/app/home/1', pathMatch: 'full' },
           { path: 'home/:page', component: HomeComponent, canActivate: [AppRouteGuard] },
           { path: 'detail/:id', component: TopicDetailComponent },
